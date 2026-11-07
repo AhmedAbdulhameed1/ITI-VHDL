@@ -1,0 +1,4 @@
+I faced a timing problem because of the undesired delay I wrote into the testbench before and after asserting and deasserting control and address signals 
+Those delays where longer than a clock period
+--> this cased that writing a single value happens twice -> one at its right time and the other at the next address time
+--> I solved it by deleting unnecessary delays and just keeping delays that ensures the input had the time needed to be written successfully.

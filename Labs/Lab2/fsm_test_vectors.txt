@@ -1,0 +1,16 @@
+1 0 0 1 Normal reset check: reset asserted with x=0, output must be 0 for forced 'even' state.
+1 1 1 1 Reset priority check: reset asserted with x=1, async reset must still force 'even' so y = g(even,1) = 1.
+0 1 0 1 Reset released with x held at 1: state should move even->odd, y must drop to 0.
+0 0 1 1 x deasserted from 'odd' state: output should stay high (still odd parity).
+0 1 0 1 x asserted again from 'odd' state: parity returns to even, y should drop to 0.
+0 0 0 3 x held low for 3 consecutive cycles from 'even' state: output must remain 0 throughout (steady-state check).
+0 1 1 1 Single-cycle pulse on x from steady 'even' state should flip output to 1 and move to 'odd'.
+0 0 1 3 x held low for 3 consecutive cycles from 'odd' state: output must remain 1 throughout (steady-state check).
+0 1 1 2 x held high for 2 consecutive cycles: state toggles odd->even->odd, ending with y = 1.
+0 0 1 2 x held low for 2 consecutive cycles from 'odd' state: output must stay constant at 1 across both cycles.
+1 1 1 1 Reset asserted from 'odd' state with x=1: async reset must force state back to 'even' regardless of current state/input.
+1 1 1 2 Reset held for multiple clock cycles with x=1: state/output must remain fixed at 'even'/1 regardless of elapsed cycles.
+0 0 0 1 Reset de-asserted with x=0: FSM should resume normal operation from 'even' with output low.
+0 1 1 1 Resume parity counting: x=1 from 'even' should set output high and move to 'odd'.
+1 0 0 1 Second reset check, asserted from 'odd' state with x=0: output should read 0 for the forced 'even' state.
+0 1 1 1 Post-reset sanity check: single x=1 pulse should transition even->odd with y=1 as expected.

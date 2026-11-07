@@ -1,0 +1,16 @@
+x_ in is 0 and the expected y_out is 0, actual y_out is 0, clk is = 1, reset is 1. This happened at time  16 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 1, clk is = 1, reset is 1. This happened at time  26 ns. Test passed
+x_ in is 1 and the expected y_out is 0, actual y_out is 0, clk is = 1, reset is 0. This happened at time  36 ns. Test passed
+x_ in is 0 and the expected y_out is 1, actual y_out is 1, clk is = 1, reset is 0. This happened at time  46 ns. Test passed
+x_ in is 1 and the expected y_out is 0, actual y_out is 1, clk is = 1, reset is 0. This happened at time  56 ns. Test failed! Error: x asserted again from 'odd' state: parity returns to even, y should drop to 0.
+x_ in is 0 and the expected y_out is 0, actual y_out is 0, clk is = 1, reset is 0. This happened at time  86 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 0, clk is = 1, reset is 0. This happened at time  96 ns. Test failed! Error: Single-cycle pulse on x from steady 'even' state should flip output to 1 and move to 'odd'.
+x_ in is 0 and the expected y_out is 1, actual y_out is 1, clk is = 1, reset is 0. This happened at time  126 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 0, clk is = 1, reset is 0. This happened at time  146 ns. Test failed! Error: x held high for 2 consecutive cycles: state toggles odd->even->odd, ending with y = 1.
+x_ in is 0 and the expected y_out is 1, actual y_out is 1, clk is = 1, reset is 0. This happened at time  166 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 1, clk is = 1, reset is 1. This happened at time  176 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 1, clk is = 1, reset is 1. This happened at time  196 ns. Test passed
+x_ in is 0 and the expected y_out is 0, actual y_out is 0, clk is = 1, reset is 0. This happened at time  206 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 0, clk is = 1, reset is 0. This happened at time  216 ns. Test failed! Error: Resume parity counting: x=1 from 'even' should set output high and move to 'odd'.
+x_ in is 0 and the expected y_out is 0, actual y_out is 0, clk is = 1, reset is 1. This happened at time  226 ns. Test passed
+x_ in is 1 and the expected y_out is 1, actual y_out is 0, clk is = 1, reset is 0. This happened at time  236 ns. Test failed! Error: Post-reset sanity check: single x=1 pulse should transition even->odd with y=1 as expected.
